@@ -3,10 +3,8 @@
   <a href="https://https://github.com/LucasB25/web-panais">
     <img src="https://raidtools.herokuapp.com/logo.png" alt="Logo" width="80" height="80">
   </a>
-
-  <h3 align="center">RaidTools</h3>
-<br>
-  <p align="center">
+  <h3>RaidTools</h3>
+  <p>
     <br>
     <a href="https://raidtools.herokuapp.com/">Panel</a>
   </p>
