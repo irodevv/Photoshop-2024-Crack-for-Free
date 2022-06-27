@@ -2,7 +2,7 @@ raidtool
 
 ---
 
-[panel](https://raidtools.herokuapp.com/)
+[panel](https://raidtools.herokuapp.com/) (token user)
 
 Pour avoir le `secret password` il faut ce follow à mon git et star ce repo, ensuite me [dm](https://discord.com/users/282127911690174475)
 
