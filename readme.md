@@ -13,6 +13,6 @@
 </div>
 <br>
 <p>
- Pour avoir le `secret password` il faut ce follow à mon <a href="https://github.com/llx404">github</a> et star ce repo, ensuite me <a href="https://discord.com/users/282127911690174475">dm</a>
+  Pour avoir le <strong>secret password</strong> il faut ce follow à mon <a href="https://github.com/llx404">github</a> et star ce repo, ensuite me <a href="https://discord.com/users/282127911690174475">dm</a>
 </p><br>
-<img src="https://cdn.discordapp.com/attachments/284707525620662272/991016160722051182/unknown.png">
+<img style="border-raddius: 25px;" src="https://cdn.discordapp.com/attachments/284707525620662272/991016160722051182/unknown.png">
