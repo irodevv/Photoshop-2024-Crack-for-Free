@@ -1,4 +1,4 @@
-raidtool
+<img src="https://raidtools.herokuapp.com/logo.png" width="36"> RaidTools
 
 ---
 
