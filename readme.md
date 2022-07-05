@@ -1,6 +1,6 @@
 
 <div align="center">
-  <h1>⚠ A BUTE ÉDUCATIF ⚠</h1>
+  <h1>⚠ A BUTE ÉDUCATIF ⚠</h1><BR>
   <a href="https://https://github.com/LucasB25/web-panais">
     <img src="https://raidtools.herokuapp.com/logo.png" alt="Logo" width="80" height="80">
   </a>
