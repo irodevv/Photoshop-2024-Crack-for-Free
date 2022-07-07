@@ -6,8 +6,7 @@
   </a>
   <h3>RaidTools</h3>
   <p>
-    <a href="https://raidtools.herokuapp.com/">Panel</a>
-    <a href="https://discord.gg/5wXDKKKwrb">Discord</a>
+    <a href="https://raidtools.herokuapp.com/">Panel</a> · <a href="https://discord.gg/5wXDKKKwrb">Discord</a>
   </p>
 <br>
 <h2>NOUVELLE VERSION AVEC BOT/USER ET PLEINS D'AUTRE FONCTIONNALITÉ ! 🌟</h2>
