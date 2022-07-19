@@ -8,4 +8,8 @@
   <p>
     <a href="https://raidtools.herokuapp.com/">Panel</a> · <a href="https://discord.gg/5wXDKKKwrb">Discord</a>
   </p>
+  <br> 
+  <h2>Base Source (only https)</h2>
+<p> Il manque les functions pour raid</p><br>
+<img src="https://cdn.discordapp.com/attachments/284707525620662272/999012105363660800/unknown.png">
 </div>
