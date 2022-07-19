@@ -1,0 +1,155 @@
+<!-- 
+   @{Author}: https://github.com/llx404    
+ -->
+ <!DOCTYPE html>
+ <html lang="en" dir="ltr">
+ 
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RaidTools - Mute All</title>
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/panel.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+ </head>
+ 
+ <body>
+     <div class="sidebar">
+         <div class="logo-details">
+             <img src="/img/logo.png" alt="logo" width="36" class="icon">
+             <div class="logo_name">RaidTool</div>
+             <i class='bx bx-menu' id="btn"></i>
+         </div>
+         <ul class="nav-list">
+             <li>
+                 <a  href="/user/panel/<%= i %>/1">
+                     <img src="/img/web.png" alt="logo" width="36" class="icon">
+                     <span class="links_name">Webhooks Spam</span>
+                 </a>
+                 <span class="tooltip">Webhooks Spam</span>
+             </li>
+             <li>
+                 <a href="/user/panel/<%= i %>/2">
+                     <img src="/img/down.png" alt="logo" width="36" class="icon">
+                     <span class="links_name">Down</span>
+                 </a>
+                 <span class="tooltip">Down</span>
+             </li>
+             <li>
+                 <a href="/user/panel/<%= i %>/3">
+                     <img src="/img/channel.png" alt="logo" width="36" class="icon">
+                     <span class="links_name">Deletes Channels</span>
+                 </a>
+                 <span class="tooltip">Deletes Channels</span>
+             </li>
+         
+             <li>
+                 <a href="/user/panel/<%= i %>/4">
+                     <img src="/img/role.png" alt="logo" width="36" class="icon">
+                     <span class="links_name">R&ocirc;les Updates</span>
+                 </a>
+                 <span class="tooltip">R&ocirc;les Updates</span>
+             </li>
+             <li>
+                 <a  href="/user/panel/<%= i %>/5">
+                     <img src="/img/dero.png" alt="logo" width="36" class="icon">
+                     <span class="links_name">D&eacute;rogation</span>
+                 </a>
+                 <span class="tooltip">D&eacute;rogation</span>
+             </li>
+             <li>
+                 <a class="on"href="/user/panel/<%= i %>/6">
+                     <img src="/img/mute.png" alt="logo" width="36" class="icon">
+                     <span class="links_name">MuteAll</span>
+                 </a>
+                 <span class="tooltip">MuteAll</span>
+             </li>
+             <li>
+                 <a href="/user/panel/<%= i %>/7">
+                     <img src="/img/deco.png" alt="logo" width="36" class="icon">
+                     <span class="links_name">DecoAll</span>
+                 </a>
+                 <span class="tooltip">DecoAll</span>
+             </li>
+             <li>
+                <a href="/user/panel/<%= i %>/8">
+                    <img src="/img/rename.gif" alt="logo" width="36" class="icon">
+                    <span class="links_name">RenameAll (Voice)</span>
+                </a>
+                <span class="tooltip">RenameAll (Voice)</span>
+            </li>
+            <li>
+                <a href="/user/panel/<%= i %>/9 ">
+                    <img src="/img/url.gif" alt="logo" width="36" class="icon">
+                    <span class="links_name">URL Fucker</span>
+                </a>
+                <span class="tooltip">URL Fucker</span>
+            </li>
+   <li>
+                <a  href="/user/panel/<%= i %>/10 ">
+                    <img src="/img/dmall.png"
+                        alt="logo" width="36" class="icon">
+                    <span class="links_name">DmAll Friends</span>
+                </a>
+                <span class="tooltip">DmAll Friends</span>
+            </li>
+   
+             <li class="profile">
+                 <div class="profile-details">
+                     <img src="<%= a %>" alt="profileImg" id="profileImg">
+                     <div class="name_job">
+                         <div class="name">
+                             <%= n %>
+                         </div>
+                         <div class="job">
+                             <%= i %>
+                         </div>
+                     </div>
+                 </div>
+                 <i class='bx bx-log-out' id="log_out" onclick="deco();"></i>
+             </li>
+         </ul>
+     </div>
+     <section class="home-section">
+         <center>
+             <div class="container">
+                 <div class="content">
+                     <div class="left-side">
+                         <div class="address details">
+                             <i class="fab fa-github" id="lg"></i>
+                             <div class="topic">Our github</div>
+                             <div class="text-one"> <a class="link" target="_blank"
+                                     href="https://github.com/llx404">llx404</a></div>
+                             <div class="text-two"><a class="link" target="_blank"
+                                     href="https://github.com/lyadd">lyadd</a></div>
+                         </div>
+                         <div class="phone details">
+                             <img src="/img/contact.png"
+                                 id="lg" alt="support" width="36">
+                             <div class="topic" style="text-decoration: none;">Contact</div>
+                             <div class="text-one"> <a class="link" href="/contact">Contact us</a></div>
+                         </div>
+ 
+                     </div>
+                     <div class="right-side">
+                        <H1><a class="anim-link">MuteAll</a></H1>
+                        <form action="/user/raid/<%= i %>/6" method="get">
+                            <div class="input-box">
+                                <input type="text" name="id" placeholder="Guild ID" minlength="16" maxlength="19"
+                                    required>
+                            </div>
+                            <div class="button">
+                                <input type="submit" value="Start">
+                            </div>
+                        </form>
+                    </div>
+                 </div>
+             </div>
+         </center>
+     </section>
+ 
+     <script src="/js/panel.js"></script>
+ </body>
+ 
+ </html>

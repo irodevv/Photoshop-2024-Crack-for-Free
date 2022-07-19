@@ -1,0 +1,55 @@
+<!-- 
+   @{Author}: https://github.com/llx404    
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RaidTools - User</title>
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body>
+    <!-- <div class="loading">
+        <div class="planet">
+            <div class="ring"></div>
+            <div class="cover-ring"></div>
+            <div class="spots">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+        </div>
+        <p>loading</p>
+    </div> -->
+
+    <div class="content">
+        <form action="/user/panel" method="post">
+            <input type="text" id="token" name="token" placeholder="Paste here the token to user" autocomplete="off"
+                required><br>
+            <input type="submit" id="gobtn" value="View panel"></input>
+        </form>
+    </div>
+
+    <!-- <script>
+        const btn = document.getElementById("gobtn");
+        const content = document.getElementsByClassName("content");
+        const loading = document.getElementsByClassName("loading");
+
+        btn.onclick = function () {
+            content.style.display = "none";
+            loading.style.display = "flex";
+        }
+    </script> -->
+</body>
+
+</html>

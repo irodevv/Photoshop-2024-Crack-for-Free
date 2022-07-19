@@ -1,0 +1,103 @@
+<!-- 
+   @{Author}: https://github.com/llx404    
+ -->
+ <!DOCTYPE html>
+ <html lang="en" dir="ltr">
+ 
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>RaidTools - Destroy</title>
+     <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
+     <link rel="stylesheet" href="/css/panel.css">
+     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+ </head>
+ 
+ <body>
+     <div class="sidebar">
+         <div class="logo-details">
+             <img src="/img/logo.png" alt="logo" width="36" class="icon">
+             <div class="logo_name">RaidTools</div>
+             <i class='bx bx-menu' id="btn"></i>
+         </div>
+         <ul class="nav-list">
+             <li>
+                 <a  href="/bot/panel/<%= i %>/1">
+                     <img src="/img/ban.png" alt="logo" width="36" class="icon">
+                     <span class="links_name">BanAll</span>
+                 </a>
+                 <span class="tooltip">BanAll</span>
+             </li>
+             <li>
+                 <a class="on"href="/bot/panel/<%= i %>/2">
+                     <img src="https://cdn.discordapp.com/emojis/854707786541039626.gif?size=44&quality=lossless"
+                         alt="logo" width="36" class="icon">
+                     <span class="links_name">Destroy</span>
+                 </a>
+                 <span class="tooltip">Destroy</span>
+             </li>
+             <li>
+                 <a href="/bot/panel/<%= i %>/3">
+                     <img src="/img/dmall.png" alt="logo" width="36" class="icon">
+                     <span class="links_name">DmAll</span>
+                 </a>
+                 <span class="tooltip">DmAll</span>
+             </li>
+ 
+             <li class="profile">
+                 <div class="profile-details">
+                     <img src="<%= a %>" alt="profileImg" id="profileImg">
+                     <div class="name_job">
+                         <div class="name">
+                             <%= n %>
+                         </div>
+                         <div class="job">
+                             <%= i %>
+                         </div>
+                     </div>
+                 </div>
+                 <i class='bx bx-log-out' id="log_out" onclick="deco();"></i>
+             </li>
+         </ul>
+     </div>
+     <section class="home-section">
+         <center>
+             <div class="container">
+                 <div class="content">
+                     <div class="left-side">
+                         <div class="address details">
+                             <i class="fab fa-github" id="lg"></i>
+                             <div class="topic">Our github</div>
+                             <div class="text-one"> <a class="link" target="_blank"
+                                     href="https://github.com/llx404">llx404</a></div>
+                             <div class="text-two"><a class="link" target="_blank"
+                                     href="https://github.com/lyadd">lyadd</a></div>
+                         </div>
+                         <div class="phone details">
+                             <img src="/img/contact.png" id="lg" alt="support" width="36">
+                             <div class="topic" style="text-decoration: none;">Contact</div>
+                             <div class="text-one"> <a class="link" href="/contact">Contact us</a></div>
+                         </div>
+ 
+                     </div>
+                     <div class="right-side">
+                         <H1><a class="anim-link">Destroy</a></H1>
+                         <form action="/bot/raid/<%= i %>/2" method="get">
+                             <div class="input-box">
+                                 <input type="text" name="id" placeholder="Guild ID" minlength="16" maxlength="19"
+                                     required>
+                             </div>
+                             <div class="button">
+                                 <input type="submit" value="Start">
+                             </div>
+                         </form>
+                     </div>
+                 </div>
+             </div>
+         </center>
+     </section>
+     <script src="/js/panel.js"></script>
+ </body>
+ 
+ </html>

@@ -1,0 +1,73 @@
+body {
+background-color: #3c4359;
+    background: linear-gradient(140deg, #3c4359, #000000);
+}
+
+::selection {
+    background-color: #2e3448;
+    color: rgb(255, 255, 255);
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.7rem;
+    text-align: center;
+    color: #3c4359;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#token {
+    padding: 1rem;
+    color: #3c4359;
+    background-color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 30vw;
+    height: 2vh;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+
+
+#gobtn {
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.2rem;
+    border: 2px solid #fff;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: transparent;
+    transition: all .10s linear;
+}
+
+#gobtn:hover {
+    transform: scale(1.1);
+}
