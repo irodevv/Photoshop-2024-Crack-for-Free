@@ -9,7 +9,7 @@
     <a href="https://raidtools.herokuapp.com/">Panel</a> · <a href="https://discord.gg/5wXDKKKwrb">Discord</a>
   </p>
   <br>
-  <p>Example:</p>
+  <p>Example: (Panel User)</p>
   <img src="https://cdn.discordapp.com/attachments/284707525620662272/999012824414179480/unknown.png">
 <br>
   <h2>Base Source (only https)</h2>
