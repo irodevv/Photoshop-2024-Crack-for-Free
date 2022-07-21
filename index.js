@@ -20,10 +20,10 @@ const loadApp = (dir = "./app/") => {
         const commands = readdirSync(`${dir}/${dirs}/`).filter(files => files.endsWith(".js"));
         for (const file of commands) {
             const getFile = require(`${dir}/${dirs}/${file}`);
-            if (dirs === "get") {
+            if (getFile.method === "get") {
                 app.get(getFile.path, async (req, res) => await getFile.go(req, res))
             }
-            if (dirs === "post") {
+            if (getFile.method === "post") {
                 app.post(getFile.path, async (req, res) => await getFile.go(req, res))
             }
             console.log(`=> [${new Date().getHours() + ":" + new Date().getMinutes() + ":" + new Date().getUTCSeconds()}] - app charger {${getFile.path}} [${dirs}]`)
