@@ -1,10 +1,10 @@
 
 <div align="center">
-  <h1>⚠ À BUTE ÉDUCATIVE ⚠</h1><BR>
+  <h1>⚠ À BUT ÉDUCATIF  ⚠</h1><BR>
     <img src="https://raidtools.herokuapp.com/img/logo.png" alt="Logo" width="80" height="80">
   <h3>RaidTools</h3>
   <p>
-    <a href="https://raidtools.herokuapp.com/">Panel</a> · <a href="https://discord.gg/5wXDKKKwrb">Discord</a>
+    <a href="https://raidtools.herokuapp.com/">Panel</a> · <a href="https://discord.gg/ctp">Discord</a>
   </p>
   <br>
   <p>Example: (Panel User)</p>
