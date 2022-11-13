@@ -1,7 +1,7 @@
 
 <div align="center">
-  <h1>⚠ À BUT ÉDUCATIF  ⚠</h1><br>
-    <img src="https://raidtools.herokuapp.com/img/logo.png" alt="Logo" width="80" height="80">
+  <h1>⚠ À BUT ÉDUCATIF ⚠</h1><br>
+    <div style="background-image: url('https://raidtools.herokuapp.com/img/logo.png');width: 144px;height: 144px;margin: -8px auto;background-repeat: no-repeat;background-size: cover;"></div>
   <h3>RaidTools</h3>
   <p>
     <a href="https://raidtools.herokuapp.com/">Panel</a> · <a href="https://discord.gg/ctp">Discord</a>
