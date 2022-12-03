@@ -1,6 +1,6 @@
 
 <div align="center">
-  <h1>⚠ À BUT ÉDUCATIF ⚠</h1><br>
+  <h1>⚠ À BUT ÉDUCATIF ⚠ (Un de mes premièrs projet.)</h1><br>
     <img src="https://raidtools.herokuapp.com/img/logo.png" alt="Logo" width="80" height="80">
 
   <h3>RaidTools</h3>
