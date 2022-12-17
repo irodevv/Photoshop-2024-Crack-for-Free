@@ -5,7 +5,7 @@
 
   <h3>RaidTools</h3>
   <p>
-    <a href="https://raidtools.herokuapp.com/">Panel</a> · <a href="https://discord.gg/ctp">Discord</a>
+    <a href="https://raidtools.herokuapp.com/">Panel</a>
   </p>
   <br>
   <p>Example: (Panel User)</p>
