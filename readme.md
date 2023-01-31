@@ -1,17 +1,16 @@
 
 <div align="center">
-  <h1>⚠ À BUT ÉDUCATIF ⚠ (Un de mes premièrs projet.)</h1><br>
-    <img src="https://raidtools.herokuapp.com/img/logo.png" alt="Logo" width="80" height="80">
+    <img src="./public/assets/img/logo.ico" alt="Logo" width="80" height="80">
 
-  <h3>RaidTools</h3>
+  <h3>Copp Ta Sapp</h3>
   <p>
     <a href="https://raidtools.herokuapp.com/">Panel</a>
   </p>
   <br>
   <p>Example: (Panel User)</p>
-  <img src="https://cdn.discordapp.com/attachments/284707525620662272/999012824414179480/unknown.png">
-<br>
-  <h2>Base Source (only https)</h2>
-<p> Il manque: ./assets/function</p><br>
-<img src="https://cdn.discordapp.com/attachments/284707525620662272/999012105363660800/unknown.png">
+<div  style="display:flex">
+  <img src="https://cdn.discordapp.com/attachments/937015753843044402/1070025689522258002/image.png">
+  <img src="https://cdn.discordapp.com/attachments/937015753843044402/1070025724179775668/image.png">
+</div>
+
 </div>
