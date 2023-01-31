@@ -3,9 +3,7 @@
     <img src="./public/assets/img/logo.ico" alt="Logo" width="80" height="80">
 
   <h1>Copp Ta Sapp</h1>
-  <p>
-    <a href="https://raidtools.herokuapp.com/">Site</a> - <a href="https://raidtools.herokuapp.com/">Browse</a>
-  </p>
+
   <br>
   <h2>Example:</h2>
   <img width="50%" src="https://cdn.discordapp.com/attachments/937015753843044402/1070025689522258002/image.png">
