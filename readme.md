@@ -2,7 +2,7 @@
 <div align="center">
     <img src="./public/assets/img/logo.ico" alt="Logo" width="80" height="80">
 
-  <h3>Copp Ta Sapp</h3
+    <h3>Copp Ta Sapp</h3>
       
     <h3>Credits:</h3>
 - <a href="https://github.com/zougataga/copptasapp/blob/main/utils/moniteur/api.js">./utils/moniteur/api.js</a> 
