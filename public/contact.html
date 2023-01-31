@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Cop Ta Sapp - Accueil</title>
+    <link rel="shortcut icon" href="/assets/img/logo.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/lib/toast/toast.min.css">
+    <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="preload">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <div class="landingpage">
+        <div class="navbar">
+            <a class="navlogo">Cop Ta Sapp</a>
+            <button class="hamburger" id="menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+                    <path d="M3 12h18M3 6h18M3 18h18" />
+                </svg>
+            </button>
+            <div class="navlinkwrap">
+                <a href="/" class="navlink">Accueil</a>
+                <a href="/contact" class="navlink selectedlink">Contact</a>
+                <a href="https://discord.com/invite/cts" class="navlink">Discord</a>
+            </div>
+            <div class="buttonwrap">
+                <button onclick="window.location.href='/browse'" class="createbtn selectedbtn">BROWSE</button>
+            </div>
+        </div>
+        <nav id="nav">
+            <div class="navItems">
+                <a href="/" class="navlink">Accueil</a>
+                <a href="/contact" class="navlink selectedlink">Contact</a>
+                <a href="https://discord.com/invite/cts" class="navlink">Discord</a>
+                <button onclick="window.location.href='/browse'" class="createbtn selectedbtn">BROWSE</button>
+            </div>
+            <div class="navCloseIcon">
+                <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml:space="preserve"
+                    stroke="#fff" width="42" height="42">
+                    <path
+                        d="m53.691 50.609 13.467-13.467a2 2 0 1 0-2.828-2.828L50.863 47.781 37.398 34.314a2 2 0 1 0-2.828 2.828l13.465 13.467-14.293 14.293a2 2 0 1 0 2.828 2.828l14.293-14.293L65.156 67.73c.391.391.902.586 1.414.586s1.023-.195 1.414-.586a2 2 0 0 0 0-2.828L53.691 50.609z">
+                    </path>
+                </svg>
+            </div>
+        </nav>
+        <div class="box" id="co">
+            <div class="infobox">
+                <div class="container">
+                    <form id="contact">
+                        <h1 class="infobox-boldtext">Nous contacter</h1><br>
+                        <fieldset>
+                            <input id="p" placeholder="Pseudo" type="text" tabindex="1" minlength="3" maxlength="30"
+                                required autofocus>
+                        </fieldset>
+                        <fieldset>
+                            <input id="e" placeholder="Email (xxxx@gmail.com)" type="email" minlength="3" tabindex="2"
+                                required>
+                        </fieldset>
+                        <fieldset>
+                            <input id="o" placeholder="Object (Ex: Partenariat)" type="text" minlength="3"
+                                maxlength="30" tabindex="4" required>
+                        </fieldset>
+                        <fieldset>
+                            <textarea id="m" placeholder="Message..." tabindex="5" minlength="3" maxlength="700"
+                                required></textarea>
+                        </fieldset>
+                        <fieldset>
+                            <button name="submit" type="submit" id="contact-submit"
+                                data-submit="Chargement...">Envoyer</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-main">Lancez-vous dès maintenant !</div>
+            <div class="footer-navigate">
+                <div class="nav">
+                    <h5>Site</h5>
+                    <p><a href="/">Accueil</a></p>
+                    <p><a href="/contact">Contact</a></p>
+                    <p><a href="/browse">Browse</a></p>
+                    <!-- <p><a href="/connexion">Connexion</a></p>
+                    <p><a href="/inscription">Inscription</a></p> -->
+                </div>
+                <div class="nav">
+                    <h5>Contact</h5>
+                    <p><a href="https://github.com/CopTaSapp" target="_blank">Github</a></p>
+                    <p><a href="https://discord.com/invite/cts" target="_blank">Discord</a></p>
+                    <p><a href="https://www.tiktok.com/@coptasapp" target="_blank">TikTok</a></p>
+                </div>
+                <div class="nav">
+                    <h5>Owner</h5>
+                    <p><a href="https://github.com/zougataga" target="_blank">Zougataga</a></p>
+                    <p><a href="https://github.com/apoow3b" target="_blank">Aposh</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer2">
+            <div></div>
+            <p>Copyright 2021 Cop Ta Sapp</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="/assets/js/base.js"></script>
+    <script type="text/javascript" src="/assets/lib/toast/toast.min.js"></script>
+    <script type="text/javascript" src="/assets/js/home.js"></script>
+</body>
+
+</html>
