@@ -9,8 +9,8 @@
   <br>
   <p>Example: (Panel User)</p>
 <div  style="display:flex">
-  <img src="https://cdn.discordapp.com/attachments/937015753843044402/1070025689522258002/image.png">
-  <img src="https://cdn.discordapp.com/attachments/937015753843044402/1070025724179775668/image.png">
+  <img width="50%" src="https://cdn.discordapp.com/attachments/937015753843044402/1070025689522258002/image.png">
+  <img width="50%"  src="https://cdn.discordapp.com/attachments/937015753843044402/1070025724179775668/image.png">
 </div>
 
 </div>
