@@ -4,8 +4,7 @@
 
   <h1>Copp Ta Sapp</h1>
   <p>
-    <a href="https://raidtools.herokuapp.com/">Site</a>
-    <a href="https://raidtools.herokuapp.com/">Browse</a>
+    <a href="https://raidtools.herokuapp.com/">Site</a> - <a href="https://raidtools.herokuapp.com/">Browse</a>
   </p>
   <br>
   <h2>Example:</h2>
