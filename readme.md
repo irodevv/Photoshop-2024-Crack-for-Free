@@ -4,9 +4,10 @@
 
   <h3>Copp Ta Sapp</h3>
 
+<h3>Credits:</h3>
   <br>
-  <h4>Example:</h4>
-  <img width="50%" src="https://cdn.discordapp.com/attachments/937015753843044402/1070025689522258002/image.png">
-  <img width="50%"  src="https://cdn.discordapp.com/attachments/937015753843044402/1070025724179775668/image.png">
-  <img width="50%"  src="https://cdn.discordapp.com/attachments/937015753843044402/1070025608614125589/image.png">
+  <h3>Example:</h3>
+  <img width="70%" src="https://cdn.discordapp.com/attachments/937015753843044402/1070025689522258002/image.png">
+  <img width="70%"  src="https://cdn.discordapp.com/attachments/937015753843044402/1070025724179775668/image.png">
+  <img width="70%"  src="https://cdn.discordapp.com/attachments/937015753843044402/1070025608614125589/image.png">
 </div>
