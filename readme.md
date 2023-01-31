@@ -1,7 +1,6 @@
 
 <div align="center">
     <img src="./public/assets/img/logo.ico" alt="Logo" width="80" height="80">
-
     <h3>Copp Ta Sapp</h3>
       
   <br>
