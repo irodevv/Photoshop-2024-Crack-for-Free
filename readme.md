@@ -5,7 +5,7 @@
   <h1>Copp Ta Sapp</h1>
 
   <br>
-  <h2>Example:</h2>
+  <p>Example:</p>
   <img width="50%" src="https://cdn.discordapp.com/attachments/937015753843044402/1070025689522258002/image.png">
   <img width="50%"  src="https://cdn.discordapp.com/attachments/937015753843044402/1070025724179775668/image.png">
   <img width="50%"  src="https://cdn.discordapp.com/attachments/937015753843044402/1070025608614125589/image.png">
