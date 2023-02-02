@@ -2,7 +2,7 @@
 <div align="center">
     <img src="./public/assets/img/logo.ico" alt="Logo" width="80" height="80">
     <h3>Copp Ta Sapp</h3>
-      
+      <p>Pas encore host dsl</p>
   <br>
   <h3>Example:</h3>
   <img width="30%" src="https://cdn.discordapp.com/attachments/937015753843044402/1070025689522258002/image.png">
