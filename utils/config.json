@@ -3,11 +3,11 @@
         "port": 8080
     },
     "bot": {
-        "token": "",
+        "token": "MTA0MDM3NDg0ODI4MDU5NjU4MA.Gou9BZ.n5dMq9_9YrWQJrZtlcPrFWYw04KtkFwrK3LS7k",
         "color": "#2196F3",
         "footer": "Copp ta Sapp - https://coptasapp.fr",
         "d": {
-            "d": "http://5.189.144.19:8080",
+            "d": "http://5.189.144.19/8080",
             "h": "5.189.144.19",
             "p": 8080
         },
@@ -16,11 +16,11 @@
         ]
     },
     "webhooks": {
-        "contact": "",
+        "contact": "https://canary.discord.com/api/webhooks/1068884182455029812/XZz-cHfv4n-tPHSetdlyxfIGlqzWHmY6bk_iJo1WzBGu6oxutR7uLqOPlqBOHb1wZlAZ",
         "logs": {
-            "request": "",
-            "loginregister": "",
-            "bot": ""
+            "request": "https://canary.discord.com/api/webhooks/1068885003179663400/hovhgM2W8YeB45lLPn8w4wnQorc45WiBBPc4OzCdi-kShFafT_AgdbI45WcCPqiSqX5o",
+            "loginregister": "https://canary.discord.com/api/webhooks/1068883959099957349/NdyTZSjW4Zwv_aBc8BxaA6XvcNZKeO3py1XIfdNO4k29BBuzcDtyExCk9sqNxsSALrC-",
+            "bot": "https://canary.discord.com/api/webhooks/1069681643750707281/2oybuB9DZKw8Rrh__LBdrsl6GyKsq0CgA2UzyNuziSGA7909Dx2nDhMyq6Y9DV4GSVUv"
         }
     }
 }

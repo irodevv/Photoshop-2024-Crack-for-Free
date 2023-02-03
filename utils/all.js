@@ -126,7 +126,7 @@ async function paginationEmbed(client, interaction, data, embed, map, count) {
     embed.setDescription(data.length != 0 ? map(data.slice(p0, p1)) : "`Aucune donnée trouvée`");
 
     if (data.length > count) {
-        embed.setFields({ name: `Page`, value: `\`${page} / ${Math.ceil(fields.length / count) === 0 ? 1 : Math.ceil(fields.length / count)}\``, inline: false });
+        embed.setFields({ name: `Page`, value: `\`${page} / ${Math.ceil(data.length / count) === 0 ? 1 : Math.ceil(data.length / count)}\``, inline: false });
         await interaction.editReply({ embeds: [embed], components: [row] });
 
         setTimeout(() => interaction.editReply({ embeds: [client.embed().setDescription("Temps écoulé !")], components: [] }), 60000 * 5);
@@ -143,12 +143,12 @@ async function paginationEmbed(client, interaction, data, embed, map, count) {
                 page = page - 1
 
                 embed.setDescription(map(data.slice(p0, p1)));
-                embed.setFields({ name: `Page`, value: `\`${page} / ${Math.ceil(fields.length / count) === 0 ? 1 : Math.ceil(fields.length / count)}\``, inline: false });
+                embed.setFields({ name: `Page`, value: `\`${page} / ${Math.ceil(data.length / count) === 0 ? 1 : Math.ceil(data.length / count)}\``, inline: false });
                 interaction.editReply({ embeds: [embed] });
             }
             if (inter.customId === `calendar2_${interaction.id}`) {
                 inter.deferUpdate().catch(() => { });
-                if (p1 + count > fields.length + count) return;
+                if (p1 + count > data.length + count) return;
                 if (p0 + count === undefined || p1 + count === undefined) return;
 
                 p0 = p0 + count;
@@ -156,7 +156,7 @@ async function paginationEmbed(client, interaction, data, embed, map, count) {
                 page++;
 
                 embed.setDescription(map(data.slice(p0, p1)));
-                embed.setFields({ name: `Page`, value: `\`${page} / ${Math.ceil(fields.length / count) === 0 ? 1 : Math.ceil(fields.length / count)}\``, inline: false });
+                embed.setFields({ name: `Page`, value: `\`${page} / ${Math.ceil(data.length / count) === 0 ? 1 : Math.ceil(data.length / count)}\``, inline: false });
                 interaction.editReply({ embeds: [embed] });
             }
 
