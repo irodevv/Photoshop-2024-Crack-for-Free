@@ -16,11 +16,11 @@
         ]
     },
     "webhooks": {
-        "contact": "https://canary.discord.com/api/webhooks/1068884182455029812/XZz-cHfv4n-tPHSetdlyxfIGlqzWHmY6bk_iJo1WzBGu6oxutR7uLqOPlqBOHb1wZlAZ",
+        "contact": "",
         "logs": {
-            "request": "https://canary.discord.com/api/webhooks/1068885003179663400/hovhgM2W8YeB45lLPn8w4wnQorc45WiBBPc4OzCdi-kShFafT_AgdbI45WcCPqiSqX5o",
-            "loginregister": "https://canary.discord.com/api/webhooks/1068883959099957349/NdyTZSjW4Zwv_aBc8BxaA6XvcNZKeO3py1XIfdNO4k29BBuzcDtyExCk9sqNxsSALrC-",
-            "bot": "https://canary.discord.com/api/webhooks/1069681643750707281/2oybuB9DZKw8Rrh__LBdrsl6GyKsq0CgA2UzyNuziSGA7909Dx2nDhMyq6Y9DV4GSVUv"
+            "request": "",
+            "loginregister": "",
+            "bot": ""
         }
     }
 }
