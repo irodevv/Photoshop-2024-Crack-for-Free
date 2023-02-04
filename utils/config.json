@@ -3,7 +3,7 @@
         "port": 8080
     },
     "bot": {
-        "token": "MTA0MDM3NDg0ODI4MDU5NjU4MA.Gou9BZ.n5dMq9_9YrWQJrZtlcPrFWYw04KtkFwrK3LS7k",
+        "token": "TOKEN",
         "color": "#2196F3",
         "footer": "Copp ta Sapp - https://coptasapp.fr",
         "d": {
