@@ -1,6 +1,5 @@
 module.exports = {
-    token: "MTA4NDc4ODAwODY1NTUzNjE0OA.GMLm3k.O5qKLgS4yXMP_u2Gjpryo_4K6ZGWjehFZi9DoA",
-
+    token: "",
     moniteur: {
         interval: 5000,
         debug: false,
