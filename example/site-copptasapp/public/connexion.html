@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Cop Ta Sapp - Connexion</title>
+    <link rel="shortcut icon" href="/assets/img/logo.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/connexion.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/assets/lib/captcha/captchadefou.css">
+    <link rel="stylesheet" href="/assets/lib/toast/toast.min.css">
+</head>
+
+<body>
+    <div class="login">
+        <div class="icon">
+            <img src="/assets/img/logo.ico" alt="Favicon">
+        </div>
+        <h1>Se connecter</h1>
+        <form id="go">
+            <input type="text" id="pseudo" name="u" placeholder="Pseudo" minlength="3" maxlength="30"
+                required="required" />
+            <input type="password" id="mdp" name="p" placeholder="Mots de passe" minlength="6" maxlength="100"
+                required="required" />
+            <button type="submit" class="btn">Se connecter</button>
+        </form>
+        <div class="form-link">
+            <span>Pas encore de compte ? <a href="/inscription">Inscris-toi !</a></span>
+        </div>
+        <div class="line"></div>
+        <div class="media-options">
+            <a href="#" class="field discord" disabled>
+                <i class='bx bxl-discord discord-icon'></i>
+                <span>Se connecter avec discord</span>
+            </a>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <p>
+                <canvas id="canvas"></canvas>
+            </p>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="/assets/js/base.js"></script>
+    <script type="text/javascript" src="/assets/lib/captcha/captchadefou.js"></script>
+    <script type="text/javascript" src="/assets/lib/toast/toast.min.js"></script>
+    <script type="text/javascript" src="/assets/js/connexion.js"></script>
+</body>
+
+</html>

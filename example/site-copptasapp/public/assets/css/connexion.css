@@ -1,0 +1,174 @@
+html {
+    overflow: hidden;
+}
+
+body {
+    overflow: hidden!important;
+}
+
+.login {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin: -150px 0 0 -150px;
+    width: 300px;
+}
+
+.login .icon {
+    width: 100%;
+    text-align: center;
+}
+
+.login img {
+    border-radius: 50px;
+    height: 70px;
+}
+
+.login h1 {
+    color: #fff;
+    text-shadow: 0 0 10px var(--m4);
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 2em;
+    margin: 0.37em 0;
+}
+
+/* 
+input[type="password"] {
+    font: small-caption;
+    font-size: 17px;
+} */
+
+input {
+    width: 100%;
+    margin-bottom: 10px;
+    background: var(--m4);
+    border: 1px solid transparent;
+    outline: none;
+    padding: 10px;
+    font-size: 13px;
+    color: #fff;
+    border-radius: 4px;
+    transition: border .5s ease;
+}
+
+input:focus {
+    border: 1px solid var(--m3);
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+.btn {
+    zoom: 1;
+    color: #ccc;
+    margin-bottom: 0;
+    font-size: 13px;
+    text-align: center;
+    cursor: pointer;
+    padding: 9px 14px;
+    font-size: 15px;
+    line-height: normal;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    width: 100%;
+    display: block;
+    background: var(--m3);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    border: none;
+    transition: opacity .5s ease;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+
+.line {
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin: 36px 0;
+    background-color: #ccc;
+}
+
+.line::before {
+    content: 'Ou';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--m);
+    color: #fff;
+    padding: 0 15px;
+}
+
+.media-options a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.form-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form-link span,
+.form-link a {
+    font-size: 14px;
+    font-weight: 400;
+    color: #ccc;
+}
+
+.form-link a {
+    color: var(--m3);
+}
+
+.form-link a:hover {
+    text-decoration: underline;
+}
+
+.media-options {
+    cursor: not-allowed !important;
+}
+
+.field {
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 6px;
+
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+a.discord {
+    color: #fff;
+    background-color: #7289da;
+}
+
+a.discord .discord-icon {
+    height: 28px;
+    width: 28px;
+    color: #fff;
+    font-size: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img,
+a {
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+}
+

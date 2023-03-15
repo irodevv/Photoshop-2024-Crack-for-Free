@@ -1,0 +1,26 @@
+{
+    "api": {
+        "port": 8080
+    },
+    "bot": {
+        "token": "",
+        "color": "#2196F3",
+        "footer": "Copp ta Sapp - https://coptasapp.fr",
+        "d": {
+            "d": "http://5.189.144.19/8080",
+            "h": "5.189.144.19",
+            "p": 8080
+        },
+        "admins": [
+            "282127911690174475"
+        ]
+    },
+    "webhooks": {
+        "contact": "",
+        "logs": {
+            "request": "",
+            "loginregister": "",
+            "bot": ""
+        }
+    }
+}

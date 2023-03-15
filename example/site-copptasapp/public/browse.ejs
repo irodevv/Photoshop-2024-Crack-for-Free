@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Cop Ta Sapp - Browse</title>
+    <link rel="shortcut icon" href="/assets/img/logo.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/browse.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/assets/lib/toast/toast.min.css">
+</head>
+
+<body>
+    <script>const pseudo = `<%=user?.u%>`, userId = `<%=user?.id%>`, isCat = `<%-isCategory?JSON.stringify(isCategory):false%>`;</script>
+    <% 
+    const catHTML = (e, on) => {
+        return `<a ${on?`class="on" href="javascript:;"`:`href="/browse?id=${e.id}"`} id="category-${e.id}" title="Vinted: ${e.u}">
+            <div class="navPrompt2">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                    stroke-linecap="round" stroke-linejoin="round" width="15" height="15">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <p>${e.n.length <= 10 ? e.n:e.n.slice(0,10)+"..."}</p>
+                        ${e.notif ? ` <span class="notif"></span>`:""}
+                        <div class="opts">
+                            <button id="editcat-${e.id}"><svg stroke="currentColor" fill="none" stroke-width="2"
+                                    viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"
+                                    class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 20h9"></path>
+                                    <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                                </svg></button>
+                            <button class="rednav" onclick="window.location.href='/category/delete/${user?.id}/${e.id}'"><svg
+                                    stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                                    stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" height="1em"
+                                    width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <polyline points="3 6 5 6 21 6"></polyline>
+                                    <path
+                                        d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                    </path>
+                                    <line x1="10" y1="11" x2="10" y2="17"></line>
+                                    <line x1="14" y1="11" x2="14" y2="17"></line>
+                                </svg></button>
+                        </div>
+            </div>
+        </a>
+        `
+    };
+    const item=`
+    <div class="sideMenuButton" id="newcat"><span>+</span>New Category</div>
+        <div class="category">
+            <div id="allcat">
+                ${isCategory? catHTML(isCategory,true):""}
+                ${category ? category.map(e => catHTML(e)).join("\n"):``}
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="navPromptWrapper"></div>
+            <a href="/category/delete/${user?.id}/all" id="clearcat" rel="noreferrer">
+                <div class="navPrompt rednav">
+                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                        stroke-linejoin="round" width="25" height="25">
+                        <polyline points="3 6 5 6 21 6"></polyline>
+                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                        </path>
+                        <line x1="10" y1="11" x2="10" y2="17"></line>
+                        <line x1="14" y1="11" x2="14" y2="17"></line>
+                    </svg>
+                    <p>Clear Category</p>
+                </div>
+            </a>
+            <a href="https://discord.com/invite/cts" target="_blank" rel="noreferrer">
+                <div class="navPrompt">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#fff" stroke="#fff" width="25"
+                        height="25">
+                        <title>discord_fill</title>
+                        <g stroke="none" fill="none" fill-rule="evenodd">
+                            <path
+                                d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002-.071.035-.02.004-.014-.004-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01-.017.428.005.02.01.013.104.074.015.004.012-.004.104-.074.012-.016.004-.017-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113-.013.002-.185.093-.01.01-.003.011.018.43.005.012.008.007.201.093c.012.004.023 0 .029-.008l.004-.014-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014-.034.614c0 .012.007.02.017.024l.015-.002.201-.093.01-.008.004-.011.017-.43-.003-.012-.01-.01-.184-.092Z">
+                            </path>
+                            <path
+                                d="M15.003 4c.744 0 1.53.26 2.25.547l.527.216c1.26.528 1.968 1.636 2.517 2.853.891 1.975 1.51 4.608 1.724 6.61.102.95.127 1.906-.056 2.549-.197.687-.867 1.173-1.518 1.555l-.322.183-.334.186c-.172.096-.349.191-.525.284l-.522.27-.717.357-.577.284a1 1 0 1 1-.894-1.788l.79-.39-.58-.609c-1.39.57-3.027.893-4.766.893-1.739 0-3.376-.322-4.766-.893l-.58.608.793.39a1 1 0 1 1-.894 1.79l-.544-.27c-.402-.2-.805-.398-1.203-.607l-.928-.505-.321-.183c-.651-.382-1.322-.868-1.518-1.555-.184-.643-.158-1.598-.057-2.55.214-2.001.833-4.634 1.724-6.609.549-1.217 1.257-2.325 2.517-2.853C7.059 4.413 8.072 4 9 4c.603 0 1.077.555.99 1.147A13.65 13.65 0 0 1 12 5c.691 0 1.366.05 2.014.148A1.012 1.012 0 0 1 15.004 4ZM8.75 10.5a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5Zm6.5 0a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5Z"
+                                fill="#fff"></path>
+                        </g>
+                    </svg>
+                    <p>Cop Ta Sapp Discord</p>
+                </div>
+            </a>
+            <a href="/logout" rel="noreferrer">
+                <div class="navPrompt">
+                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                        stroke-linejoin="round" width="25" height="25">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                        <polyline points="16 17 21 12 16 7"></polyline>
+                        <line x1="21" y1="12" x2="9" y2="12"></line>
+                    </svg>
+                    <p>Log out</p>
+                </div>
+            </a>
+        </div>
+        `%>
+        <div class="App">
+            <header>
+                <div class="menu">
+                    <button id="menu">
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            stroke="#d9d9e3" stroke-linecap="round">
+                            <path d="M21 18H3M21 12H3M21 6H3"></path>
+                        </svg>
+                    </button>
+                </div>
+                <h1>Cop Ta Sapp</h1>
+                <div class="menu">
+                    <button id="newcat">
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            stroke="#d9d9e3" stroke-linecap="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </button>
+                </div>
+            </header>
+            <nav id="nav">
+                <div class="navItems">
+                    <%- item %>
+                </div>
+                <div class="navCloseIcon"><svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
+                        xml:space="preserve" stroke="#fff" width="42" height="42">
+                        <path
+                            d="m53.691 50.609 13.467-13.467a2 2 0 1 0-2.828-2.828L50.863 47.781 37.398 34.314a2 2 0 1 0-2.828 2.828l13.465 13.467-14.293 14.293a2 2 0 1 0 2.828 2.828l14.293-14.293L65.156 67.73c.391.391.902.586 1.414.586s1.023-.195 1.414-.586a2 2 0 0 0 0-2.828L53.691 50.609z">
+                        </path>
+                    </svg></div>
+            </nav>
+            <aside class="sideMenu">
+                <%- item %>
+            </aside>
+            <section class="chatBox">
+                <div onscroll="scrolll()" class="chatLogWrapper">
+
+                    <% if(data) { %>
+                        <button onclick="goBottom()" id="topBtn" title="Go to top">
+                            <div class="icon">
+                                <svg fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1.5" d="M13.25 8.75L9.75 12L13.25 15.25"></path>
+                                </svg>
+                            </div>
+                        </button>
+                        <script>
+                            const chatBox = document.querySelector(".chatLogWrapper");
+                            const topBtn = document.getElementById("topBtn");
+                            function scrolll() {
+                                topBtn.style.display = chatBox.scrollTop > 20? "block" : "none";
+                            };
+
+                            function goBottom() {
+                                chatBox.scrollTop = chatBox.scrollHeight;
+                            }
+                        </script>
+                        <div class="masonry" id="allData">
+                            <% data.forEach(e=> {%>
+                                <div class="grid">
+                                    <img src="<%=e.pp%>">
+                                    <div class="grid__body">
+                                        <div class="relative">
+                                            <a class="grid__link" target="_blank" href="<%=e.url%>"></a>
+                                            <h1 class="grid__title">
+                                                <%=e.title%>
+                                            </h1>
+                                            <p class="grid__author">
+                                                <%=e.prix%>
+                                            </p>
+                                        </div>
+                                        <div class="mt-auto">
+                                            <button onclick="window.open('<%=e.urlbuy%>','_blank')"
+                                                class="grid__tag">Acheter</button>
+                                            <button onclick="window.open('<%=e.urlmsg%>','_blank')"
+                                                class="grid__tag">Send Msg</button>
+                                            <button onclick="window.open('<%=e.url%>','_blank')" class="grid__tag">Plus
+                                                d'info</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <% }) %>
+                        </div>
+                        <div class="center2">
+                            <h1><span class="online"></span> Entrain de chercher...</h1>
+                        </div>
+                        <% } else if(!data && isCategory) { %>
+                            <div class="center">
+                                <h1><span class="online"></span> Entrain de chercher...</h1>
+                            </div>
+                            <% } else { %>
+                                <div class="center">
+                                    <h1><strong>
+                                            <%=user?.u%>,
+                                        </strong> crée ou choisis ta category !</h1>
+                                </div>
+                                <% } %>
+
+
+                </div>
+            </section>
+        </div>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>
+                <div class="input">
+                    <h1>Crée une category</h1>
+                    <form id="go">
+                        <input type="text" id="name" name="n" placeholder="Nom" minlength="3" maxlength="30"
+                            required="required" />
+                        <input type="url" id="url" name="u" placeholder="Url vinted" minlength="6"
+                            required="required" />
+                        <button type="submit" class="btn">Ajouter</button>
+                    </form>
+                </div>
+                </p>
+            </div>
+
+        </div>
+
+        <script type="text/javascript" src="/assets/js/base.js"></script>
+        <script type="text/javascript" src="/assets/lib/toast/toast.min.js"></script>
+        <script type="text/javascript" src="/assets/js/browse.js"></script>
+</body>
+
+</html>
