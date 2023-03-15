@@ -1,0 +1,31 @@
+{
+  "name": "vinted-moniteur",
+  "version": "1.0.0",
+  "description": "Simple moniteur vinted",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zougataga/vinted-moniteur.git"
+  },
+  "keywords": [
+    "vinted",
+    "api",
+    "moniteur",
+    "monitor",
+    "noproxy",
+    "proxy"
+  ],
+  "dependencies": {
+    "cipherdata": "^1.0.1",
+    "fs": "^0.0.1-security"
+  },
+  "author": "zougataga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zougataga/vinted-moniteur/issues"
+  },
+  "homepage": "https://github.com/zougataga/vinted-moniteur#readme"
+}
