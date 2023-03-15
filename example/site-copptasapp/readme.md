@@ -1,7 +1,7 @@
 
 <div align="center">
     <img src="./public/assets/img/logo.ico" alt="Logo" width="80" height="80">
-    <h3>Copp Ta Sapp</h3>
+    <h3>Copp Ta Sapp (N'utilise pas vinted-moniteur car je l'est fait avant)</h3>
       <p>Pas encore host dsl</p>
   <br>
   <h3>Example:</h3>
