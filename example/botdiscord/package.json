@@ -1,6 +1,6 @@
 {
-    "dependencies": {
-        "discord.js": "^13.14.0",
-        "vinted-moniteur": "^1.0.1"
-    }
+  "dependencies": {
+    "discord.js": "^13.14.0",
+    "vinted-moniteur": "^1.0.5"
+  }
 }
