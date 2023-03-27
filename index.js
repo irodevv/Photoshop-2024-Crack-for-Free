@@ -1,59 +1,39 @@
 const
-    zougatagaDb = require("zougatagadb"),
     fs = require("fs"),
+    EventEmitter = require('eventemitter3'),
     {
         parseVintedURL,
         vintedSearch
     } = require("./lib/api.js");
-class VintedMoniteur {
+
+
+    
+
+class VintedMoniteur extends EventEmitter {
     constructor(obj) {
+        super();
+
+        this.url = obj?.url;
+
         this.dbPath = obj?.dbPath;
         this.interval = obj?.interval ?? 5000;
         this.debug = obj?.debug ?? false;
         this.proxy = this.#proxy(obj?.proxy) ?? false;
-        this.db = new zougatagaDb({ path: this.dbPath });
-    };
-
-    watch(url, call) {
-        const
-            self = this,
-            db = self.db,
-            { validURL, domain, querystring } = parseVintedURL(url);
-        if (!validURL) call("Invalid URL")
-        else {
-            const exist = db.pull("watch", (e) => e.url == url, "object");
-            let id;
-            if (!exist) {
-                id = this.#createId();
-                db.push("watch", { url, id })
-            } else id = exist?.id;
-            if (this.debug) console.log(`Moniteur lancer sur: ${url}`);
-            this.#search(url, call);
-            return id
-        }
-    };
-
-    unWatch(urlOrId) {
-        const
-            self = this,
-            db = self.db,
-            exist = db.pull("watch", (e) => (e.url === urlOrId || e.id === urlOrId), "object"),
-            id = exist?.id;
-        if (id) {
-            db.delete(`last_${id}`);
-            db.delete(`first_${id}`);
-            const
-                data = db.get("watch"),
-                index = data.indexOf(exist);
-            data.splice(index, 1);
-            db.set("watch", data);
-            if (this.debug) console.log(`Moniteur supprimer sur: ${url}`);
-        }
+        this.db = new Map();
+        this.#init();
     }
 
 
-    #createId() {
-        return Date.now().toString(36) + Math.random().toString(36).substr(2)
+    #init() {
+        const
+            self = this,
+            url = self.url,
+            { validURL, domain, querystring } = parseVintedURL(url);
+        if (!validURL) this.emit("error", "Invalid URL");
+        else {
+            if (this.debug) console.log(`Moniteur lancer sur: ${url}`);
+            this.#search();
+        };
     }
 
     #proxy(listOrFile) {
@@ -63,35 +43,35 @@ class VintedMoniteur {
         else return;
     }
 
-    #search(url, call) {
+    #search() {
         return new Promise(async resolve => {
             try {
                 const
                     db = this.db,
-                    id = (db.pull("watch", (e) => e.url == url, "object"))?.id;
-                if (!call || !id) return resolve();
-                setTimeout(() => this.#search(url, call), this.interval);
+                    url = this.url;
+
+                    setTimeout(() => this.#search(), this.interval);
                 const
                     res = await vintedSearch(url, this.proxy);
                 if (!res.items) return resolve();
                 const
-                    isFirstSync = db.get(`first_${id}`),
-                    lastItemTimestamp = db.get(`last_${id}`),
+                    isFirstSync = db.get(`first`),
+                    lastItemTimestamp = db.get(`last`),
                     items = res.items
                         .sort((a, b) => b?.photo?.high_resolution?.timestamp - a?.photo?.high_resolution?.timestamp)
                         .filter((item) => !lastItemTimestamp || item?.photo?.high_resolution?.timestamp > lastItemTimestamp);
                 if (!items.length) return resolve();
 
                 const newLastItemTimestamp = items[0]?.photo?.high_resolution?.timestamp;
-                if (!lastItemTimestamp || newLastItemTimestamp > lastItemTimestamp) db.set(`last_${id}`, newLastItemTimestamp);
+                if (!lastItemTimestamp || newLastItemTimestamp > lastItemTimestamp) db.set(`last`, newLastItemTimestamp);
 
                 const itemsToSend = ((lastItemTimestamp && !isFirstSync) ? items.reverse() : [items[0]]);
                 if (itemsToSend.length > 0) {
-                    db.set(`first_${id}`, true);
-                    if (this.debug) console.log(`${itemsToSend.length} ${itemsToSend.length > 1 ? 'nouveaux articles trouvés' : 'nouvel article trouvé'} pour la recherche: ${url} [${id}] !\n`)
+                    db.set(`first`, true);
+                    if (this.debug) console.log(`${itemsToSend.length} ${itemsToSend.length > 1 ? 'nouveaux articles trouvés' : 'nouvel article trouvé'} pour la recherche: ${url}!\n`)
                 }
 
-                for (let item of itemsToSend) {
+                for (const item of itemsToSend) {
                     const obj = {
                         id: item.id,
                         url: {
@@ -101,6 +81,7 @@ class VintedMoniteur {
                         },
                         title: item.title || "vide",
                         pp: item.photo?.url,
+                        thumbnails: item.photo.thumbnails?.map(image => image.url),
                         color: item?.photo?.dominant_color,
                         prix: `${item.price || 'vide'} ${item.currency || "EUR"} (${item.total_item_price || 'vide'})`,
                         taille: item.size_title || 'vide',
@@ -116,7 +97,7 @@ class VintedMoniteur {
                             url: item.user?.profile_url
                         }
                     };
-                    call(false, obj);
+                    this.emit("item", obj);
                 };
                 resolve();
             } catch (error) {
@@ -126,6 +107,8 @@ class VintedMoniteur {
 
         })
     }
+
+
 
 }
 module.exports = VintedMoniteur;

@@ -1,6 +1,6 @@
 {
   "name": "vinted-moniteur",
-  "version": "1.0.0",
+  "version": "1.0.6",
   "description": "Simple moniteur vinted",
   "main": "index.js",
   "scripts": {
@@ -19,8 +19,11 @@
     "proxy"
   ],
   "dependencies": {
-    "cipherdata": "^1.0.1",
-    "fs": "^0.0.1-security"
+    "cookie": "^0.5.0",
+    "eventemitter3": "^5.0.0",
+    "fs": "^0.0.1-security",
+    "https-proxy-agent": "^5.0.1",
+    "user-agents": "^1.0.1320"
   },
   "author": "zougataga",
   "license": "ISC",

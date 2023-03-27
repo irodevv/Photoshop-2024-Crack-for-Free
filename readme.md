@@ -12,47 +12,50 @@ npm i vinted-moniteur
 
 ```js
 
-const
-    VintedMoniteur = require("../"),
-    moniteur = new VintedMoniteur({
-        interval: 5000,
-        debug: true,
-        // AVEC PROXY
-        // proxy: ["ip", "ip:port", "username:password"]
-        // ou
-        // proxy: "./proxy.txt"
-    });
+const VintedMoniteur = require("vinted-moniteur");
 
+const moniteur = new VintedMoniteur({
+    url: "https://www.vinted.fr/vetements?search_text=bonnet&order=newest_first",
+    interval: 5000,
+    debug: true,
+    // AVEC PROXY
+    // proxy: ["ip", "ip:port", "username:password"]
+    // ou
+    // proxy: "./proxy.txt"
+});
 
-const id = moniteur.watch("https://www.vinted.fr/vetements?search_text=bonnet&order=newest_first", (err, item) => {
-    if (err) return console.log(err);
-    item
-    // -> {ITEM OBJECT}
+moniteur.on("error", (err) => console.log(err));
+moniteur.on("item", (data) => {
+    console.log(data);
+    // -> OBJECT
     // {
-    //     id: 2792214400,
+    //     id: 2838672149,
     //     url: {
-    //       info: 'https://www.vinted.fr/enfants/filles/accessoires/echarpes-and-chales/2792214400-tour-de-cou-et-bonnet',
-    //       buy: 'https://www.vinted.fr/transaction/buy/new?source_screen=item&transaction%5Bitem_id%5D=2792214400',
-    //       sendmsg: 'https://www.vinted.fr//items/2792214400/want_it/new?button_name=receiver_id=2792214400'
+    //       info: 'https://www.vinted.fr/hommes/vetements/vetements-de-sport-and-accessoires/accessoires-de-sports/bonnets/2838672149-bonnet-nike',
+    //       buy: 'https://www.vinted.fr/transaction/buy/new?source_screen=item&transaction%5Bitem_id%5D=2838672149',
+    //       sendmsg: 'https://www.vinted.fr//items/2838672149/want_it/new?button_name=receiver_id=2838672149'
     //     },
-    //     title: 'Tour de cou et bonnet ',
-    //     pp: 'https://images1.vinted.net/t/02_02097_KYvUwoMYBPV6LADr4TziyfEp/f800/1678891680.jpeg?s=786f51c35ec60bbd05c58e41a263e3e3c89bc574',
-    //     color: '#ADAEAA',
-    //     prix: '2.0 EUR (2.8)',
+    //     title: 'bonnet nike ',
+    //     pp: 'https://images1.vinted.net/t/01_01e6f_tyNQCq2Zi6gjebQ6ycgqffSb/f800/1679945160.jpeg?s=93ab40d56d5376fc556ff32be240e2aace80ff1c',
+    //     thumbnails: [
+    //       'https://images1.vinted.net/t/01_01e6f_tyNQCq2Zi6gjebQ6ycgqffSb/70x100/1679945160.jpeg?s=64b32ac3aac939db1083c36c29e1d41dd5ff45cc',
+    //       'https://images1.vinted.net/t/01_01e6f_tyNQCq2Zi6gjebQ6ycgqffSb/150x210/1679945160.jpeg?s=d255bce698a607b4b87666f3144246e4223b54f3',
+    //       'https://images1.vinted.net/t/01_01e6f_tyNQCq2Zi6gjebQ6ycgqffSb/310x430/1679945160.jpeg?s=3a1d65b1f9e8846cb10e85fb6141c051651f60ab',
+    //       'https://images1.vinted.net/t/01_01e6f_tyNQCq2Zi6gjebQ6ycgqffSb/f800/1679945160.jpeg?s=93ab40d56d5376fc556ff32be240e2aace80ff1c',
+    //       'https://images1.vinted.net/t/01_01e6f_tyNQCq2Zi6gjebQ6ycgqffSb/f800/1679945160.jpeg?s=93ab40d56d5376fc556ff32be240e2aace80ff1c',
+    //       'https://images1.vinted.net/t/01_01e6f_tyNQCq2Zi6gjebQ6ycgqffSb/f800/1679945160.jpeg?s=93ab40d56d5376fc556ff32be240e2aace80ff1c'
+    //     ],
+    //     color: '#20232C',
+    //     prix: '4.0 EUR (4.9)',
     //     taille: 'vide',
-    //     marque: 'La Halle',
+    //     marque: 'Nike',
     //     stats: { favori: 0, vue: 0 },
-    //     timestamp: 1678891680,
+    //     timestamp: 1679945160,
     //     vendeur: {
-    //       name: 'lenadelanie',
-    //       pp: 'https://images1.vinted.net/t/01_016c5_AAeqiT314eZWqL4NW9p9YbeN/f800/1673615778.jpeg?s=a2537494cca7b2a69018cbc62b7c20aa5860cad9',
-    //       url: 'https://www.vinted.be/member/38419181-lenadelanie'
+    //       name: 'juu1_ee',
+    //       pp: 'https://images1.vinted.net/t/01_01590_iBqUekQU9c9vyNoqAVzG6fQn/f800/1652021442.jpeg?s=81e3c8b5c0293455fef869b99b37d544cf9ffe2a',
+    //       url: 'https://www.vinted.be/member/13276203-juu1ee'
     //     }
     //   }
 })
-
-id
-// -> lf9tonmik6dp5p6tehd
-// Id or url
-moniteur.unWatch(id);
 ```
