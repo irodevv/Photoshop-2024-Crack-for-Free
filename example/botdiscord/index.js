@@ -6,15 +6,7 @@ const
         partials: ["USER", "CHANNEL", "GUILD_MEMBER", "MESSAGE", "REACTION"]
     }),
     { token, moniteur } = require("./config"),
-    VintedMoniteur = require("vinted-moniteur"),
-    Moniteur = new VintedMoniteur({
-        interval: moniteur?.interval,
-        debug: moniteur?.debug,
-        // AVEC PROXY
-        // proxy: ["ip", "ip:port", "username:password"]
-        // ou
-        // proxy: "./proxy.txt"
-    });
+    VintedMoniteur = require("vinted-moniteur");
 
 
 client
@@ -23,8 +15,17 @@ client
         for (const urlObj of moniteur.urls) {
             const salon = client.channels.cache.get(urlObj?.salon);
             if (salon) {
-                Moniteur.watch(urlObj?.url, (err, item) => {
-                    if (err != false) return console.log(err);
+                const moni = new VintedMoniteur({
+                    url: urlObj?.url,
+                    interval: moniteur?.interval,
+                    debug: moniteur?.debug,
+                    // AVEC PROXY
+                    // proxy: ["ip", "ip:port", "username:password"]
+                    // ou
+                    // proxy: "./proxy.txt"
+                });
+                moni.on("error", (err) => console.log(err));
+                moni.on("item", (item) => {
                     console.log(item, salon.id);
                     try {
                         const
