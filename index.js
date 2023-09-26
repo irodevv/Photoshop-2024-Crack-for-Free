@@ -6,9 +6,6 @@ const
         vintedSearch
     } = require("./lib/api.js");
 
-
-    
-
 class VintedMoniteur extends EventEmitter {
     constructor(obj) {
         super();
