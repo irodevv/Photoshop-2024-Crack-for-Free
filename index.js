@@ -104,8 +104,5 @@ class VintedMoniteur extends EventEmitter {
 
         })
     }
-
-
-
 }
 module.exports = VintedMoniteur;
